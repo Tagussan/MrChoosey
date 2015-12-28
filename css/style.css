@@ -103,7 +103,7 @@ nav{
 nav .menu{
 	position:relative;
 	margin:0 auto;
-	width:80%;
+	/*width:80%;*/
 	max-width:1200px;
 	height:300px;
 	padding:5px;
@@ -279,6 +279,15 @@ nav .menu .news li　p{
 	height:400px;
 }
 
+/**********************************************************************
+/  Footer
+/**********************************************************************/
+.footer {
+	margin:0 auto;
+	max-width:1200px;
+	height:200px;
+	background:#444444;
+}
 
 /**********************************************************************
 /  Animation
