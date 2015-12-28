@@ -9,7 +9,7 @@
     $("#loader").fadeOut();
     setTimeout(function(){
       $("#preload").fadeIn();
-      var columnW = 200;
+      var columnW = 400;
       // Conditional branch due to Page
       var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
@@ -39,7 +39,7 @@
       clearTimeout(timer);
     }
     timer = setTimeout(function() {
-      var columnW = 200;
+      var columnW = 400;
       $('.grid').css('width', columnW * Math.floor($('.grid').parent().width() / columnW));
       $('nav .menu').css('width', columnW * Math.floor($('.grid').parent().width() / columnW));
       $('.footer').css('width', columnW * Math.floor($('.grid').parent().width() / columnW));
