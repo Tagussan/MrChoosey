@@ -1,0 +1,356 @@
+/**********************************************************************
+/  General
+/**********************************************************************/
+@font-face{
+    font-family:'Hiragino Kaku W0';
+    src: url("../fonts/hiragino_kaku_w0.ttf");
+}
+
+body
+	{
+		background: #e6e6e6;
+		/*
+		background: #4e9ad5;
+		background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+		background-position: 15px 15px;
+		background-image: linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+											linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
+											linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+											linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+		background-image: -webkit-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -webkit-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -webkit-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+										 -webkit-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+	 background-image: -moz-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -moz-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -moz-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+										 -moz-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+	 background-image: -ms-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -ms-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -ms-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+										 -ms-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+	 background-image: -o-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -o-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
+										 -o-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
+										 -o-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
+										 */
+		-webkit-font-smoothing: antialiased;
+	}
+
+		body.is-loading *
+		{
+			-moz-transition: none !important;
+			-webkit-transition: none !important;
+			-o-transition: none !important;
+			-ms-transition: none !important;
+			transition: none !important;
+			-moz-animation: none !important;
+			-webkit-animation: none !important;
+			-o-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+		}
+
+	::-webkit-input-placeholder,
+	:-moz-placeholder,
+	::-moz-placeholder,
+	:-ms-input-placeholder
+	{ /* WebKit, Blink, Edge */
+			margin-left:10px;
+			vertical-align: bottom;
+	    color: darkgray;
+	}
+
+
+	body,input,textarea,select
+	{
+		font-family: Meiryo,TakaoPGothic;
+		font-size: 1.5vw;
+		font-weight: 100;
+		line-height: 1.2em;
+		color: #333;
+	}
+
+	h1,h2,h4,h5,h6
+	{
+		font-family: Meiryo,TakaoPGothic;
+		color: white;
+		line-height: 1.5em;
+	}
+
+	p{
+		font-family: Meiryo,TakaoPGothic;
+		color: white;
+		line-height: 1.2em;
+	}
+
+	h1{
+		font-size: 2em;
+	}
+
+
+
+
+/**********************************************************************
+/  Menu
+/**********************************************************************/
+nav{
+	position:relative;
+	top:0;
+	width:100%;
+}
+
+nav .menu{
+	position:relative;
+	margin:0 auto;
+	width:80%;
+	max-width:1200px;
+	height:300px;
+	padding:5px;
+	background:#444444;
+}
+
+nav .menu .social{
+	padding:5px;
+	position:absolute;
+	height:50px;
+	min-width: 150px;
+	top:0;
+	left:0;
+}
+nav .social li{
+	display: inline-block;
+}
+nav .social li a{
+	text-align: center;
+	font-size:30px;
+	color:lightgray;
+	width:50px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+nav .social li a:hover{
+	color:#ff4f00;
+}
+
+nav .menu .search{
+	position:absolute;
+	right:0;
+	top:0;
+	width:25%;
+	height:50px;
+	overflow: hidden;
+}
+nav .menu .search a{
+	position: absolute;
+	top:0;
+	right:0;
+	line-height:50px;
+	width:50px;
+	display: inline-block;
+	text-align:center;
+	vertical-align: middle;
+	color: black;
+}
+nav .menu .search input[type="text"] {
+  display: block;
+  width: 100%;
+	height:50px;
+	opacity:0.9;
+  font-family: Meiryo, TakaoPGothic, 'Hiragino Kaku W0';
+  font-size: 1rem;
+	padding-left:10px;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+	background: lightgray;
+}
+nav .menu .search input[type="text"]:focus {
+	opacity: 1;
+  outline: none;
+}
+
+nav .menu .language{
+	position:absolute;
+	right:25%;
+}
+nav .menu .language li{
+	display: inline-block;
+	margin:0px auto;
+	height:50px;
+}
+nav .menu .language li a{
+	display: inline-block;
+	margin-right:10px;
+	text-align: center;
+	font-family: Meiryo, TakaoPGothic, 'Hiragino Kaku W0';
+	font-size:1rem;
+	color:gray;
+	padding-top:20px;
+}
+nav .menu .language li a:hover{
+	color:#ff4f00;
+}
+nav .menu .language li a.active{
+	color:white;
+}
+
+nav .menu .logo{
+	position:absolute;
+	height:240px;
+	left:0;
+	bottom:0;
+}
+nav .menu .logo img{
+	position:absolute;
+}
+nav .menu .logo h1,
+nav .menu .logo p{
+	padding-left:200px;
+	vertical-align: middle;
+}
+
+nav .menu .news{
+	position:absolute;
+	bottom:10px;
+	right:0;
+	width:40%;
+	overflow: hidden;
+}
+nav .menu .news h1{
+	font-size:1.2rem;
+}
+nav .menu .news li{
+	background:#ff4f00;
+	width:100%;
+	height:90px;
+	margin-top:5px;
+	padding:5px;
+	list-style-type: none;
+}
+nav .menu .news li:hover{
+	animation:blink 0.5s ease-in-out alternate infinite;
+}
+nav .menu .news li　p{
+	margin-left:0px;
+}
+
+/**********************************************************************
+/  Body
+/**********************************************************************/
+.main{
+}
+
+/* ---- grid ---- */
+.grid.home{
+  display:block;
+  margin:auto;
+  max-width: 1200px;
+}
+
+/* clear fix */
+.grid:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-item{
+	box-sizing: border-box;
+  float: left;
+  width:  33.4%;
+  height: 200px;
+  overflow:hidden;
+	padding:10px;
+	border:solid 1px #e6e6e6;
+	background: #444444;
+}
+.grid-item.opened{
+}
+
+.grid-item--wide1{
+	width:50%;
+}
+.grid-item--wide2{
+	width:66.6%;
+}
+.grid-item--high{
+	height:400px;
+}
+
+
+/**********************************************************************
+/  Animation
+/**********************************************************************/
+@-webkit-keyframes blink{
+  0% {opacity:1;}
+  100% {opacity:0.7;}
+
+}
+@keyframes blink{
+  0% {opacity:1;}
+  100% {opacity:0.7;}
+}
+
+@-webkit-keyframes iblink{
+  0% {opacity:0.1;}
+  100% {opacity:1;}
+
+}
+@keyframes iblink{
+  0% {opacity:0.1;}
+  100% {opacity:1;}
+}
+
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+  25% {-webkit-transform: rotate(90deg);}
+  50% {-webkit-transform: rotate(180deg);}
+  75% {-webkit-transform: rotate(270deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+  25% {transform: rotate(90deg);}
+	50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}
+	100% {transform: rotate(360deg);}
+}
+
+/**********************************************************************
+/  Slideshow
+/**********************************************************************/
+#slide {
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  position:relative;
+}
+
+#slide ul,
+#slide li{
+  width:100%;
+  height:100%;
+}
+
+#slide img {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  visibility: visible;
+}
+
+/**********************************************************************
+/  Responsive
+/**********************************************************************/
+@media only screen and (max-width: 1024px){
+
+}
+
+@media only screen and (max-width: 640px){
+
+}
