@@ -12,18 +12,15 @@
       // Conditional branch due to Page
       var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
+        percentPosition: true,
         masonry: {
           columnWidth: '.grid-sizer'
-          columnHeight: 200
         }
       });
       $grid.on( 'click', '.grid-item', function() {
-        if($(this).hasClass('opened')){
-          $(this).removeClass('opened');
-        } else {
-          $('.grid-item').removeClass('opened');
-          $(this).addClass('opened');
-        }
+        $(this).toggleClass('opened');
+        $(this).children('.movie .sizer').toggleClass('fa-expand');
+        $(this).children('.movie .sizer').toggleClass('fa-compress');
         $grid.isotope('layout');
       });
     },1000);
@@ -39,13 +36,14 @@
       clearTimeout(timer);
     }
     timer = setTimeout(function() {
+      /*
       $('.grid').isotope({
         itemSelector: '.grid-item',
         masonry: {
           columnWidth: '.grid-sizer'
-          columnHeight: 200
         }
-      });
+      });*/
+      $grid.isotope('reLayout');
     }, 200);
   });
 
