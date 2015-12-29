@@ -106,7 +106,6 @@ nav .menu{
 	height:300px;
 	padding:5px;
 	background:#444444;
-  border:solid 1px #e6e6e6;
 }
 
 nav .menu .social{
@@ -266,14 +265,15 @@ nav .menu .news li　p{
   height: 200px;
   overflow:hidden;
 	padding:10px;
-	border:solid 1px #e6e6e6;
 	background: #444444;
 }
 .grid-item.article h1{
-  display: inline;
-  padding-right:10%;
+  display: block;
   background: #ff4f00;
+  margin-top:-10px;
   margin-left:-10px;
+  margin-right:-10px;
+  text-align: center;
 }
 
 .grid-item.movie,
@@ -281,7 +281,7 @@ nav .menu .news li　p{
   padding:0;
 }
 .grid-sizer{
-  width:400px;
+  width:200px;
 }
 
 .grid-item.movie.opened{
@@ -322,7 +322,6 @@ nav .menu .news li　p{
 	max-width:1200px;
 	height:200px;
 	background:#444444;
-  border:solid 1px #e6e6e6;
 }
 
 /**********************************************************************
@@ -434,6 +433,7 @@ nav .menu .news li　p{
 
   h1{
     font-size: 3vw;
+    line-height: 2em;
   }
   p{
     font-size: 2vw;
