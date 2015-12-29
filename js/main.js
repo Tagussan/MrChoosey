@@ -18,8 +18,8 @@
       });
       $grid.on( 'click', '.grid-item', function() {
         $(this).toggleClass('opened');
-        $(this).children('.movie .sizer').toggleClass('fa-expand');
-        $(this).children('.movie .sizer').toggleClass('fa-compress');
+        $(this).children('.sizer').toggleClass('fa-expand');
+        $(this).children('.sizer').toggleClass('fa-compress');
         $grid.isotope('layout');
       });
     },1000);
