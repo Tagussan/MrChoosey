@@ -473,10 +473,22 @@ nav .menu .news li　p{
   .grid-item,
   .grid-item--wide1,
   .grid-item--wide2{
-    width:100%;
+    width:50%;
   }
 
   .footer{
+    width:100%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .grid-sizer{
+    width:50%;
+  }
+
+  .grid-item,
+  .grid-item--wide1,
+  .grid-item--wide2{
     width:100%;
   }
 }
