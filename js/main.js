@@ -40,9 +40,6 @@
     }
     timer = setTimeout(function() {
       var columnW = 400;
-      $('.grid').css('width', columnW * Math.floor($('.grid').parent().width() / columnW));
-      $('nav .menu').css('width', columnW * Math.floor($('.grid').parent().width() / columnW));
-      $('.footer').css('width', columnW * Math.floor($('.grid').parent().width() / columnW));
       $('.grid').isotope({
         itemSelector: '.grid-item',
         masonry: {
