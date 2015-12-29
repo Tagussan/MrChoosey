@@ -63,7 +63,7 @@ body
 
 	body,input,textarea,select
 	{
-		font-family: Meiryo,TakaoPGothic;
+		font-family: Meiryo,TakaoPGothic,'Hiragino Kaku W0';
 		font-size: 1.5vw;
 		font-weight: 100;
 		line-height: 1.2em;
@@ -72,13 +72,13 @@ body
 
 	h1,h2,h4,h5,h6
 	{
-		font-family: Meiryo,TakaoPGothic;
+		font-family: Meiryo,TakaoPGothic,'Hiragino Kaku W0';
 		color: white;
 		line-height: 1.5em;
 	}
 
 	p{
-		font-family: Meiryo,TakaoPGothic;
+		font-family: Meiryo,TakaoPGothic,'Hiragino Kaku W0';
 		color: white;
 		line-height: 1.2em;
 	}
