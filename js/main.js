@@ -12,7 +12,6 @@
       // Conditional branch due to Page
       var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
-        percentPosition: true,
         masonry: {
           columnWidth: '.grid-sizer'
         }
@@ -43,7 +42,7 @@
           columnWidth: '.grid-sizer'
         }
       });*/
-      $grid.isotope('reLayout');
+      $('grid').isotope('reLayout');
     }, 200);
   });
 

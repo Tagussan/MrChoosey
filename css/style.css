@@ -288,6 +288,7 @@ nav .menu .news li　p{
   width:800px;
   height:400px;
 }
+
 .grid-item.movie .sizer{
   font-size:40px;
   padding:5px;
@@ -430,6 +431,13 @@ nav .menu .news li　p{
 	:-ms-input-placeholder { /* WebKit, Blink, Edge */
 			margin-left:5px;
 	}
+
+  h1{
+    font-size: 3vw;
+  }
+  p{
+    font-size: 2vw;
+  }
 
   nav .menu{
     width:100%;
