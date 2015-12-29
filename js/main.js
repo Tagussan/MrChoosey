@@ -9,12 +9,12 @@
     $("#loader").fadeOut();
     setTimeout(function(){
       $("#preload").fadeIn();
-      var columnW = 400;
       // Conditional branch due to Page
       var $grid = $('.grid').isotope({
         itemSelector: '.grid-item',
         masonry: {
-          columnWidth: columnW
+          columnWidth: '.grid-sizer'
+          columnHeight: 200
         }
       });
       $grid.on( 'click', '.grid-item', function() {
@@ -39,11 +39,11 @@
       clearTimeout(timer);
     }
     timer = setTimeout(function() {
-      var columnW = 400;
       $('.grid').isotope({
         itemSelector: '.grid-item',
         masonry: {
-          columnWidth: columnW
+          columnWidth: '.grid-sizer'
+          columnHeight: 200
         }
       });
     }, 200);

@@ -267,6 +267,10 @@ nav .menu .news li　p{
 	border:solid 1px #e6e6e6;
 	background: #444444;
 }
+.grid-sizer{
+  width:240px;
+}
+
 .grid-item.opened{
 }
 
@@ -461,10 +465,15 @@ nav .menu .news li　p{
   .grid.home{
     width:100%;
   }
+
+  .grid-sizer{
+    width:50%;
+  }
+
   .grid-item,
   .grid-item--wide1,
   .grid-item--wide2{
-    width:100%;
+    width:50%;
   }
 
   .footer{
