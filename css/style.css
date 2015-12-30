@@ -593,11 +593,12 @@ nav .menu .news li　p{
     width:100%;
   }
   nav .menu .logo img{
-    width:100px;
+    width:30%;
+    max-height:100px;
   }
   nav .menu .logo .title{
-    height:90px;
-    width:auto;
+    max-height:100px;
+    width:70%;
   }
   nav .menu .news{
   	top:130px;
