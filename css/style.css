@@ -361,7 +361,14 @@ nav .menu .news li　p{
 	margin:0 auto;
 	max-width:1200px;
 	height:100px;
-	background:#444444;
+}
+
+.footer h1{
+  font-family:'Open Sans';
+  font-size:16px;
+  text-align: center;
+  padding:5px;
+  color:black;
 }
 
 /**********************************************************************
