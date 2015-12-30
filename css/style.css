@@ -81,13 +81,32 @@ body
 		font-family: Meiryo,TakaoPGothic,'Hiragino Kaku W0';
 		color: white;
 		line-height: 1.2em;
+    font-size: 0.8em;
 	}
 
 	h1{
 		font-size: 1.5vw;
 	}
-
-
+  h2{
+    position: relative;
+    margin:10px 0 1em;
+    padding: 0.1em;
+    border:solid 1px #ff4f00;
+    color: white;
+    font-size: 1em;
+  }
+  h2:after{
+    position: absolute;
+    bottom: -0.8em;
+    left: 10%;
+    z-index: 90;
+    margin-left: -0.8em;
+    border-top: 0.8em solid #ff4f00;
+    border-left: 0.8em solid transparent;
+    border-right: 0.8em solid transparent;
+    border-bottom: 0;
+    content: "";
+  }
 
 
 /**********************************************************************
@@ -278,7 +297,7 @@ nav .menu .news li　p{
   margin-right:-10px;
   text-align: center;
 }
-.grid-item.article .sizer{
+.grid-item .sizer{
   font-size:40px;
   padding:5px;
   position: absolute;
@@ -290,7 +309,7 @@ nav .menu .news li　p{
   margin-left:-10px;
   background:rgba(255,255,255,0.5);
 }
-.grid-item.article .sizer:hover{
+.grid-item .sizer:hover{
   opacity:1;
   color:#ff4f00;
 }
@@ -301,6 +320,10 @@ nav .menu .news li　p{
 }
 .grid-sizer{
   width:200px;
+}
+
+.grid-item.opened{
+  height:400px;
 }
 
 .grid-item.movie.opened{
@@ -315,6 +338,7 @@ nav .menu .news li　p{
   color:white;
   opacity:0.6;
   width:50px;
+  margin:0 auto;
   text-align: center;
   background:rgba(255,255,255,0.5);
 }
@@ -329,9 +353,6 @@ nav .menu .news li　p{
 .grid-item--wide2{
 	width:800px;
 }
-.grid-item--high{
-	height:400px;
-}
 
 /**********************************************************************
 /  Footer
@@ -339,7 +360,7 @@ nav .menu .news li　p{
 .footer {
 	margin:0 auto;
 	max-width:1200px;
-	height:200px;
+	height:100px;
 	background:#444444;
 }
 
@@ -385,7 +406,8 @@ nav .menu .news li　p{
 /**********************************************************************
 /  Slideshow
 /**********************************************************************/
-#slide {
+#slide,
+#slide2{
   width:100%;
   height:100%;
   margin:0 auto;
@@ -393,19 +415,21 @@ nav .menu .news li　p{
 }
 
 #slide ul,
-#slide li{
+#slide2 ul,
+#slide li,
+#slide2 li{
   width:100%;
   height:100%;
 }
 
-#slide img {
+#slide img,
+#slide2 img{
   position:absolute;
   left:0;
   top:0;
   height:auto;
   width:100%;
   visibility: visible;
-
 }
 
 /**********************************************************************
@@ -429,6 +453,10 @@ nav .menu .news li　p{
     width:800px;
   }
 
+  h2{
+    font-size: 16px;
+  }
+
   .grid.home{
     width:800px;
   }
@@ -439,8 +467,8 @@ nav .menu .news li　p{
   }
 
   .grid-item.article h1{
-    line-height:40px;
-    height:40px;
+    line-height:50px;
+    height:50px;
     font-size: 20px;
   }
 
@@ -460,8 +488,11 @@ nav .menu .news li　p{
     font-size: 3vw;
     line-height: 2em;
   }
+  h2{
+    font-size: 16px;
+  }
   p{
-    font-size: 2vw;
+    font-size: 14px;
   }
 
   nav .menu{
@@ -503,22 +534,18 @@ nav .menu .news li　p{
   	padding-top:10px;
   }
   nav .menu .logo{
-    top:35px;
-    width:100%;
-  }
-  nav .menu .logo img{
-    height:60px;
-    width:60px;
+    width:40%;
   }
   nav .menu .logo h1,
   nav .menu .logo p{
+    display: none;
   	padding-left:5px;
   }
   nav .menu .news{
   	position:absolute;
   	bottom:10px;
   	right:0;
-  	width:80%;
+  	width:60%;
   	overflow: hidden;
   }
   nav .menu .news h1{
@@ -534,8 +561,8 @@ nav .menu .news li　p{
   }
 
   .grid-item.article h1{
-    line-height:30px;
-    height:30px;
+    line-height:50px;
+    height:50px;
     font-size: 20px;
   }
 
