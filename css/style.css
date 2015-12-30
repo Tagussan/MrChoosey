@@ -221,12 +221,11 @@ nav .menu .logo{
 }
 nav .menu .logo img{
   display: inline-block;
-  float:left;
-  height:200px;
+  width:30%;
 }
-nav .menu .logo h1,
-nav .menu .logo p{
-	vertical-align: middle;
+nav .menu .logo .title{
+  margin-top:-20px;
+  width:70%;
 }
 
 nav .menu .news{
@@ -236,8 +235,9 @@ nav .menu .news{
 	width:40%;
 	overflow: hidden;
 }
-nav .menu .news h1{
+nav .menu .news h2{
 	font-size:1.2rem;
+  background: #ff4f00;
 }
 nav .menu .news li{
 	background:#ff4f00;
@@ -459,6 +459,10 @@ nav .menu .news li　p{
   nav .menu{
     width:800px;
   }
+  nav .menu .logo .title{
+    margin-top:-20px;
+    width:71%;
+  }
 
   h2{
     font-size: 16px;
@@ -540,22 +544,17 @@ nav .menu .news li　p{
   	font-size:0.7rem;
   	padding-top:10px;
   }
-  nav .menu .logo{
-    width:40%;
-  }
-  nav .menu .logo h1,
-  nav .menu .logo p{
-    display: none;
-  	padding-left:5px;
+  nav .menu .logo .title{
+    width:80%;
   }
   nav .menu .news{
   	position:absolute;
   	bottom:10px;
   	right:0;
-  	width:60%;
+  	width:50%;
   	overflow: hidden;
   }
-  nav .menu .news h1{
+  nav .menu .news h2{
   	font-size:1rem;
   }
 
@@ -589,10 +588,36 @@ nav .menu .news li　p{
 }
 
 @media only screen and (max-width: 600px){
+  nav .menu .logo{
+    top:30px;
+    width:100%;
+  }
+  nav .menu .logo img{
+    width:100px;
+  }
+  nav .menu .logo .title{
+    height:90px;
+    width:auto;
+  }
+  nav .menu .news{
+  	top:130px;
+  	left:0;
+  	width:100%;
+  }
+  nav .menu .news h2{
+  	margin-left: 10px;
+  }
+  nav .menu .news li{
+    float:left;
+  	height:120px;
+    width:40%;
+    margin-left:10px;
+    margin-top:0;
+  }
+
   .grid-sizer{
     width:50%;
   }
-
   .grid-item,
   .grid-item--wide1,
   .grid-item--wide2{
