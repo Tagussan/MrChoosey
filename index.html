@@ -27,8 +27,12 @@
             <li><a class='active'>日本語</a></li>
           </div>
           <div class='search'>
-            <input type="text" name="search" placeholder="記事を検索する(未実装)" />
-            <a class="fa fa-search"></a>
+            <form name="search" id="cse-search-box" action="http://google.com/cse">
+              <input type="hidden" name="cx" value='002912641557716941250:aaueoqwdixq'/>
+              <input type="hidden" name="ie" value="UTF-8" />
+              <input type="text" name="q" size="16" placeholder="記事を検索する" />
+              <a class="fa fa-search" onclick='document.search.submit();' target="_blank"></a>
+            </form>
           </div>
           <div class='logo'><img src='./images/yarlogo2.png'><img class='title' src='./images/yartitle.png'></div>
           <div class='news'>

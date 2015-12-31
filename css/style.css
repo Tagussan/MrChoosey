@@ -170,6 +170,9 @@ nav .menu .search a{
 	vertical-align: middle;
 	color: black;
 }
+nav .menu .search a:hover{
+	color: #ff4f00;
+}
 nav .menu .search input[type="text"] {
   display: block;
   width: 100%;
@@ -231,7 +234,7 @@ nav .menu .logo .title{
 
 nav .menu .news{
 	position:absolute;
-	bottom:10px;
+	top:50px;
 	right:0;
 	width:40%;
 	overflow: hidden;
@@ -239,6 +242,7 @@ nav .menu .news{
 nav .menu .news h2{
 	font-size:1.2rem;
   background: #ff4f00;
+  margin-top:0;
 }
 nav .menu .news li{
 	background:#ff4f00;
@@ -464,6 +468,9 @@ nav .menu .news li　p{
     margin-top:-20px;
     width:71%;
   }
+  nav .menu .news{
+  	width:50%;
+  }
 
   h2{
     font-size: 16px;
@@ -549,11 +556,7 @@ nav .menu .news li　p{
     width:80%;
   }
   nav .menu .news{
-  	position:absolute;
-  	bottom:10px;
-  	right:0;
   	width:50%;
-  	overflow: hidden;
   }
   nav .menu .news h2{
   	font-size:1rem;
