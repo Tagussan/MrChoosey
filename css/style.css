@@ -339,13 +339,6 @@ nav .menu .news li　p{
   color:#ff4f00;
 }
 
-.grid-item .twitter-timeline{
-  height:150px!important;
-}
-.grid-item.opened .twitter-timeline{
-  height:350px!important;
-}
-
 .grid-item.movie,
 .grid-item.slide{
   padding:0;
