@@ -265,11 +265,8 @@ nav .menu .news li　p{
 }
 
 /**********************************************************************
-/  Body
+/  Grid
 /**********************************************************************/
-.main{
-}
-
 
 /* ---- grid ---- */
 .grid.home{
@@ -315,14 +312,15 @@ nav .menu .news li　p{
 }
 
 .grid-item .content{
-  margin-top:40px;
-  height:150px;
+  margin-top:35px;
+  height:160px;
   overflow-y: scroll;
   z-index: 3;
 }
 .grid-item.opened .content{
-  height:350px;
+  height:360px;
 }
+
 .grid-item .sizer{
   position: absolute;
   font-size:30px;
@@ -339,6 +337,13 @@ nav .menu .news li　p{
 .grid-item .sizer:hover{
   opacity:1;
   color:#ff4f00;
+}
+
+.grid-item .twitter-timeline{
+  height:150px!important;
+}
+.grid-item.opened .twitter-timeline{
+  height:350px!important;
 }
 
 .grid-item.movie,
