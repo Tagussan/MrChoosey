@@ -10,9 +10,11 @@
     setTimeout(function(){
       if($(window).width() < 800){
         $('.grid-item').each(function(){
-          if($(this).hasClass('opened'))$(this).removeClass('opened');
-          $(this).children('.sizer').toggleClass('fa-expand');
-          $(this).children('.sizer').toggleClass('fa-compress');
+          if($(this).hasClass('opened')){
+            $(this).removeClass('opened');
+            $(this).children('.sizer').toggleClass('fa-expand');
+            $(this).children('.sizer').toggleClass('fa-compress');
+          }
         });
       }
       // Conditional branch due to Page
