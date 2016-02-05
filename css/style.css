@@ -4,31 +4,6 @@
 body
 	{
 		background: #e6e6e6;
-		/*
-		background: #4e9ad5;
-		background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-		background-position: 15px 15px;
-		background-image: linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
-											linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
-											linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
-											linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
-		background-image: -webkit-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -webkit-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -webkit-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
-										 -webkit-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
-	 background-image: -moz-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -moz-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -moz-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
-										 -moz-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
-	 background-image: -ms-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -ms-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -ms-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
-										 -ms-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
-	 background-image: -o-linear-gradient(rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -o-linear-gradient(0, rgba(255, 255, 255, .3) 1px, transparent 1px),
-										 -o-linear-gradient(rgba(255, 255, 255, .1) 1px, transparent 1px),
-										 -o-linear-gradient(0, rgba(255, 255, 255, .1) 1px, transparent 1px);
-										 */
 		-webkit-font-smoothing: antialiased;
 	}
 
@@ -59,7 +34,7 @@ body
 	body,input,textarea,select
 	{
 		font-family: Meiryo,TakaoPGothic,'Hiragino Kaku W0';
-		font-size: 1.5vw;
+		font-size: 20px;
 		font-weight: 100;
 		line-height: 1.2em;
 		color: #333;
@@ -81,16 +56,14 @@ body
     font-size: 0.8em;
 	}
 
-	h1{
-		font-size: 1.5vw;
-	}
   h2{
     position: relative;
     margin:10px 0 1em;
-    padding: 0.1em;
+    padding: 0.3em;
     border:solid 1px #ff4f00;
+    background:#ff4f00;
     color: white;
-    font-size: 1em;
+    font-size: 25px;
   }
   h2:after{
     position: absolute;
@@ -105,118 +78,110 @@ body
     content: "";
   }
 
+  blockquote{
+    padding:2em 1em;
+    position:relative;
+  }
+  blockquote:before{
+    content:"“";
+    font-size:4em;
+    line-height:1em;
+    font-family:"ＭＳ Ｐゴシック",sans-serif;
+    color:black;
+    position:absolute;
+    left:0;
+    top:0;
+  }
+  blockquote:after{
+    content:"”";
+    font-size:4em;
+    line-height:0em;
+    font-family:"ＭＳ Ｐゴシック",sans-serif;
+    color:black;
+    position:absolute;
+    right:0;
+    bottom:0;
+  }
+
+  .main{
+    margin:0 auto;
+    max-width:80%;
+  }
+
+  #breadcrumbs-one{
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left:-10px;
+    width:1000px;
+  }
+
+  #breadcrumbs-one a{
+    padding: .6em 2em .6em 2em;
+    margin-left:-7px;
+    display:inline-block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    background:black;
+    height:100px;
+    width:40%;
+  }
+  #breadcrumbs-one a:first-child{
+    background: gray;
+  }
+
+  #breadcrumbs-one a:first-child::after,
+  #breadcrumbs-one a:first-child::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid;
+    right: -50px;
+  }
+  #breadcrumbs-one a:first-child::after{
+    z-index: 2;
+    border-left-color: yellow;
+  }
+  #breadcrumbs-one a:first-child::before{
+    right: -1.1em;
+    z-index: 1;
+    border-left-color: yellow;
+  }
 
 /**********************************************************************
 /  Header
 /**********************************************************************/
 .header{
+  position: relative;
   display:block;
   width:100%;
-  height:300px;
+  height:400px;
   background:#ff4f00;
-}
-/**********************************************************************
-/  Grid
-/**********************************************************************/
-
-/* ---- grid ---- */
-.grid.home{
-  display:block;
-  margin:0 auto;
-  max-width: 1200px;
-  min-height: 200px;
+  padding:10px;
 }
 
-/* clear fix */
-.grid:after{
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ---- .grid-item ---- */
-.grid-item{
+.header .logo{
   position: relative;
-	box-sizing: border-box;
-  float: left;
-  width:  400px;
-  height: 200px;
-  overflow:hidden;
-	padding:10px;
-	background: #444444;
+  top:0px;
+  font-size:40px;
 }
-.grid-item.article h1{
-  position:absolute;
-  line-height:40px;
-  height:40px;
-  width: 100%;
-  font-size: 28px;
-  background: #ff4f00;
-  margin-top:-10px;
-  margin-left:-10px;
-  margin-right:-10px;
-  text-align: center;
-}
-.grid-item.article p{
-  text-indent: 1em;
-  margin-bottom:1em;
-}
-
-.grid-item .content{
-  margin-top:35px;
-  height:160px;
-  overflow-y: scroll;
-  z-index: 3;
-}
-.grid-item.opened .content{
-  height:360px;
-}
-
-.grid-item .sizer{
+.header .lenin{
   position: absolute;
-  font-size:30px;
-  padding:5px;
-  color:white;
-  opacity:0.6;
-  width:40px;
-  text-align: center;
-  margin-top:-10px;
-  margin-left:-10px;
-  z-index:2;
-  background:rgba(255,255,255,0.5);
+  bottom:0;
+  height:200px;
 }
-.grid-item .sizer:hover{
-  opacity:1;
-  color:#ff4f00;
+.header blockquote{
+  position: absolute;
+  bottom:0;
+  left:200px;
 }
-
-.grid-item.movie,
-.grid-item.slide{
-  padding:0;
-}
-.grid-sizer{
-  width:200px;
-}
-
-.grid-item.opened{
-  height:400px;
-}
-
-.grid-item.movie.opened{
-  width:800px;
-  height:400px;
-}
-
-.grid-item.movie .sizer{
-  width:40px;
-  margin:0 auto;
-}
-
-.grid-item--wide1{
-	width:600px;
-}
-.grid-item--wide2{
-	width:800px;
+.header blockquote h1{
+  font-size: 20px;
+  color:black;
 }
 
 /**********************************************************************
@@ -224,7 +189,7 @@ body
 /**********************************************************************/
 .footer {
 	margin:0 auto;
-	max-width:1200px;
+	width:100%;
 	height:100px;
 }
 
@@ -276,209 +241,25 @@ body
 }
 
 /**********************************************************************
-/  Slideshow
-/**********************************************************************/
-#slide,
-#slide2{
-  width:100%;
-  height:100%;
-  margin:0 auto;
-  position:relative;
-}
-
-#slide ul,
-#slide2 ul,
-#slide li,
-#slide2 li{
-  width:100%;
-  height:100%;
-}
-
-#slide img,
-#slide2 img{
-  position:absolute;
-  left:0;
-  top:0;
-  height:auto;
-  width:100%;
-  visibility: visible;
-}
-
-/**********************************************************************
 /  Responsive
 /**********************************************************************/
 @media only screen and (min-width: 1200px){
-  nav .menu{
-    width:1200px;
-  }
 
-  .grid.home{
-    width:1200px;
-  }
-
-  .footer{
-    width:1200px;
-  }
 }
 @media only screen and (max-width: 1199px){
-  nav .menu{
-    width:800px;
-  }
-  nav .menu .logo .title{
-    margin-top:-20px;
-    width:71%;
-  }
-  nav .menu .news{
-  	width:50%;
-  }
-
   h2{
     font-size: 16px;
   }
   p{
     font-size: 14px;
   }
-
-  .grid.home{
-    width:800px;
-  }
-  .grid-item,
-  .grid-item--wide1,
-  .grid-item--wide2{
-    width:400px;
-  }
-
-  .grid-item.article h1{
-    font-size: 20px;
-  }
-
-  .footer{
-    width:800px;
-  }
 }
 @media only screen and (max-width: 799px){
-  ::-webkit-input-placeholder,
-	:-moz-placeholder,
-	::-moz-placeholder,
-	:-ms-input-placeholder { /* WebKit, Blink, Edge */
-			margin-left:5px;
-	}
-
   h1{
     font-size: 3vw;
     line-height: 2em;
   }
-
-  nav .menu{
-    width:100%;
-  }
-  nav .menu .social{
-  	height:30px;
-  }
-  nav .social li a{
-  	font-size:20px;
-  	width:30px;
-  	line-height: 30px;
-  }
-  nav .menu .search{
-  	width:30px;
-  	height:30px;
-  }
-  nav .menu .search a{
-  	line-height:30px;
-  	width:30px;
-    color:white;
-  }
-  nav .menu .search input[type="text"] {
-    display: block;
-  	height:30px;
-  	opacity:0.9;
-  	padding-left:5px;
-    display:none;
-  }
-  nav .menu .language{
-  	right:30px;
-  }
-  nav .menu .language li{
-  	height:30px;
-  }
-  nav .menu .language li a{
-  	margin-right:5px;
-  	font-size:0.8rem;
-    line-height: 30px;
-  }
-  nav .menu .logo .title{
-    width:80%;
-  }
-  nav .menu .news{
-  	width:50%;
-  }
-  nav .menu .news h2{
-  	font-size:1rem;
-  }
-
-  .grid.home{
-    width:100%;
-  }
-
-  .grid-sizer{
-    width:50%;
-  }
-
-  .grid-item.article h1{
-    font-size: 20px;
-  }
-
-  .grid-item,
-  .grid-item--wide1,
-  .grid-item--wide2{
-    width:50%;
-  }
-
-  .grid-item.movie.opened{
-    width:100%;
-  }
-
-  .footer{
-    width:100%;
-  }
 }
 
 @media only screen and (max-width: 600px){
-  nav .menu .logo{
-    top:30px;
-    width:100%;
-  }
-  nav .menu .logo img{
-    width:auto;
-    max-height:100px;
-  }
-  nav .menu .logo .title{
-    max-height:100px;
-    width:70%;
-  }
-  nav .menu .news{
-  	top:130px;
-  	left:0;
-  	width:100%;
-  }
-  nav .menu .news h2{
-  	margin-left: 10px;
-  }
-  nav .menu .news li{
-    float:left;
-  	height:100px;
-    width:40%;
-    margin-left:10px;
-    margin-top:0;
-  }
-
-  .grid-sizer{
-    width:50%;
-  }
-  .grid-item,
-  .grid-item--wide1,
-  .grid-item--wide2{
-    width:100%;
-  }
 }
