@@ -1,6 +1,12 @@
 (function() {
   'use strict';
 
+  $(document).on('blur', 'textarea,input', function () {
+    if($(this).val() != ""){
+      $(this).addClass('active');
+    }
+  });
+
   /*** START UP ***/
   $(document).ready(function() {
   });
