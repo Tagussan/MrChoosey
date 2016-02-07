@@ -7,29 +7,50 @@
       <link id='css' rel='stylesheet' href='./css/reset.css?v=2' />
       <link id='css' rel='stylesheet' href='./css/style.css?v=2' />
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/i18n/jquery-ui-i18n.min.js"></script>
       <script type='text/javascript' src='./js/main.js'></script>
+      <script type="text/javascript">
+      $(function() {
+        $.datepicker.setDefaults($.datepicker.regional['ja']);
+        $('#datepicker').datepicker({
+          dateFormat: 'yy/mm/dd',
+          onSelect: function(dateText, inst) {
+                    $("#inputdate").val($("#inputdate").val() + dateText + '\n');
+          }
+        });
+      });
+      </script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body>
 
       <div class='header'>
-        <div class='logo'>
-          <img class='lenin' src='./images/lenin.png' />
-          <blockquote>
-            <img class='title' src='./images/title.png' />
-            <!--h1>
-              Труд - это оптимальные распределение работы.<br />
-              労働とは仕事分配の最適化である。
-            </h1-->
-          </blockquote>
-        </div>
+        <img class='lenin' src='./images/lenin.png' />
+        <blockquote>
+          <img class='title' src='./images/title.png' />
+          <!--h1>
+            Труд - это оптимальные распределение работы.<br />
+            労働とは仕事分配の最適化である。
+          </h1-->
+        </blockquote>
+
       </div>
 
       <!--div id='loader'><img src='http://2015.igem.org/wiki/images/8/8b/UT_TOKYO_Loading.gif'></div-->
       <div class='main'>
         <h2>1分で作れる！労働スケジュール管理表</h2>
-
+        <div style='width:100%;text-align:center;'>
+          <div class='form'>
+            <input type="text" maxlength="16" placeholder="イベント名:十月革命当日のシフト" />
+          </div>
+          <div class='form form--wide1 schedule'>
+            <!--input type="text" placeholder="1917/10/25" id='inputdate' wrap='soft'/-->
+            <textarea placeholder="1917/10/25" id='inputdate' wrap='soft'></textarea>
+            <div id="datepicker"></div>
+          </div>
+        </div>
       </div>
 
       <div class='footer'>

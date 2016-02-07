@@ -66,13 +66,14 @@ body
 
   h2{
     position: relative;
-    margin:10px 0 1em;
+    margin:10px auto;
+    margin-bottom: 1em;
     padding: 0.3em;
     border:solid 1px #ff4f00;
     background:#ff4f00;
     color: white;
     font-size: 25px;
-    font-family: 'makinas';
+    width: 80%;
   }
   h2:after{
     position: absolute;
@@ -88,7 +89,7 @@ body
   }
 
   blockquote{
-    padding:2em 1em;
+    padding:1.5em 1em;
     position:relative;
   }
   blockquote:before{
@@ -114,51 +115,50 @@ body
 
   .main{
     margin:0 auto;
-    max-width:80%;
+    width:90%;
   }
 
-  #breadcrumbs-one{
-    overflow-y: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin-left:-10px;
-    width:1000px;
+  .form{
+    display: inline-block;
+    vertical-align: bottom;
+    min-height:300px;
+    width:400px;
+    background:#ff4f00;
+    margin:5px;
+    padding:10px;
   }
-
-  #breadcrumbs-one a{
-    padding: .6em 2em .6em 2em;
-    margin-left:-7px;
-    display:inline-block;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    background:black;
-    height:100px;
-    width:40%;
+  .form--wide1{
+    width:600px;
   }
-  #breadcrumbs-one a:first-child{
-    background: gray;
+  .form--wide2{
+    width:800px;
   }
-
-  #breadcrumbs-one a:first-child::after,
-  #breadcrumbs-one a:first-child::before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid;
-    right: -50px;
+  .form input[type="text"],
+  .form textarea{
+    width:90%;
+  	height:2em;
+  	opacity:0.8;
+    font-family: Meiryo, TakaoPGothic, 'Hiragino Kaku W0';
+    font-size: 1em;
+    appearance: none;
+    box-shadow: none;
+    border: none;
+  	background: white;
+    padding-left:10px;
   }
-  #breadcrumbs-one a:first-child::after{
-    z-index: 2;
-    border-left-color: yellow;
+  .form input[type="text"]:focus,
+  .form textarea:focus{
+  	opacity: 1;
+    outline: none;
   }
-  #breadcrumbs-one a:first-child::before{
-    right: -1.1em;
-    z-index: 1;
-    border-left-color: yellow;
+  .form.schedule input[type="text"]{
+    float:left;
+    width:50%;
+  }
+  .form.schedule textarea{
+    float:left;
+    width:50%;
+    height:200px;
   }
 
 /**********************************************************************
@@ -174,21 +174,18 @@ body
   overflow: hidden;
 }
 
-.header .logo{
-  position: relative;
-  height:400px;
-}
-.header .logo .lenin{
+.header .lenin{
   position: absolute;
   height:140px;
 }
-.header .logo .title{
+.header .title{
   display: inline-block;
-  height:60px;
+  height:80px;
 }
 .header blockquote{
   position: absolute;
-  left:150px;
+  left:140px;
+
 }
 
 /**********************************************************************
@@ -208,6 +205,45 @@ body
   color:black;
 }
 
+/**********************************************************************
+/  Calender
+/**********************************************************************/
+#datepicker{
+  float:right;
+  width:40%;
+}
+.ui-datepicker {
+  height: auto;
+  margin:0 auto;
+  font-family: 'Open Sans';
+}
+.ui-datepicker-title {
+  text-align: center;
+  color:white;
+}
+.ui-datepicker tr {
+  color:white;
+}
+.ui-datepicker-prev {
+
+  float:left;
+}
+.ui-datepicker-next {
+  float:right;
+}
+.ui-datepicker td{
+  text-align: center;
+  width:2em;
+  text-decoration: none;
+  background:rgba(0,0,0,0.1);
+  padding:1px;
+}
+.ui-datepicker td:hover{
+  background:rgba(0,0,0,0.3);
+}
+.ui-datepicker a{
+  color:white;
+}
 /**********************************************************************
 /  Animation
 /**********************************************************************/
