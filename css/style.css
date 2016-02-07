@@ -1,6 +1,14 @@
 /**********************************************************************
 /  General
 /**********************************************************************/
+@font-face {
+    font-family: 'makinas';
+    src: url('../fonts/makinas_web.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body
 	{
 		background: #e6e6e6;
@@ -42,7 +50,7 @@ body
 
 	h1,h2,h4,h5,h6
 	{
-		font-family: Meiryo,TakaoPGothic,'Hiragino Kaku W0';
+		font-family: 'makinas';
 		color: white;
 		line-height: 1.5em;
 	}
@@ -64,6 +72,7 @@ body
     background:#ff4f00;
     color: white;
     font-size: 25px;
+    font-family: 'makinas';
   }
   h2:after{
     position: absolute;
@@ -87,7 +96,7 @@ body
     font-size:4em;
     line-height:1em;
     font-family:"ＭＳ Ｐゴシック",sans-serif;
-    color:black;
+    color:white;
     position:absolute;
     left:0;
     top:0;
@@ -97,7 +106,7 @@ body
     font-size:4em;
     line-height:0em;
     font-family:"ＭＳ Ｐゴシック",sans-serif;
-    color:black;
+    color:white;
     position:absolute;
     right:0;
     bottom:0;
@@ -159,29 +168,27 @@ body
   position: relative;
   display:block;
   width:100%;
-  height:400px;
+  height:150px;
   background:#ff4f00;
   padding:10px;
+  overflow: hidden;
 }
 
 .header .logo{
   position: relative;
-  top:0px;
-  font-size:40px;
+  height:400px;
 }
-.header .lenin{
+.header .logo .lenin{
   position: absolute;
-  bottom:0;
-  height:200px;
+  height:140px;
+}
+.header .logo .title{
+  display: inline-block;
+  height:60px;
 }
 .header blockquote{
   position: absolute;
-  bottom:0;
-  left:200px;
-}
-.header blockquote h1{
-  font-size: 20px;
-  color:black;
+  left:150px;
 }
 
 /**********************************************************************
@@ -247,9 +254,6 @@ body
 
 }
 @media only screen and (max-width: 1199px){
-  h2{
-    font-size: 16px;
-  }
   p{
     font-size: 14px;
   }

@@ -8,28 +8,6 @@
   $(window).on('load', function() {
     $("#loader").fadeOut();
     setTimeout(function(){
-      if($(window).width() < 800){
-        $('.grid-item').each(function(){
-          if($(this).hasClass('opened')){
-            $(this).removeClass('opened');
-            $(this).children('.sizer').toggleClass('fa-expand');
-            $(this).children('.sizer').toggleClass('fa-compress');
-          }
-        });
-      }
-      // Conditional branch due to Page
-      var $grid = $('.grid').isotope({
-        itemSelector: '.grid-item',
-        masonry: {
-          columnWidth: '.grid-sizer'
-        }
-      });
-      $grid.on( 'click', '.grid-item .sizer', function() {
-        $(this).parent('.grid-item').toggleClass('opened');
-        $(this).toggleClass('fa-expand');
-        $(this).toggleClass('fa-compress');
-        $grid.isotope('layout');
-      });
       $("#preload").fadeIn();
     },1000);
   });
@@ -44,7 +22,7 @@
       clearTimeout(timer);
     }
     timer = setTimeout(function() {
-      $('grid').isotope('reLayout');
+
     }, 200);
   });
 
