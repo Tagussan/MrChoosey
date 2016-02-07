@@ -119,6 +119,7 @@ body
   }
 
   .form{
+    position: relative;
     display: inline-block;
     vertical-align: bottom;
     min-height:300px;
@@ -209,8 +210,9 @@ body
 /  Calender
 /**********************************************************************/
 #datepicker{
-  float:right;
-  width:40%;
+  position: absolute;
+  right:10px;
+  width:45%;
 }
 .ui-datepicker {
   height: auto;
@@ -225,11 +227,21 @@ body
   color:white;
 }
 .ui-datepicker-prev {
-
+  padding:5px;
+  background: rgba(0,0,0,0.1);
   float:left;
 }
 .ui-datepicker-next {
+  padding:5px;
+  background: rgba(0,0,0,0.1);
   float:right;
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+  background: rgba(0,0,0,0.5);
+}
+.ui-datepicker-title {
+  padding:5px;
 }
 .ui-datepicker td{
   text-align: center;
