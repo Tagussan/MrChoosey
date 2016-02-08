@@ -70,13 +70,14 @@ body
     border:solid 1px #ff4f00;
     background:#ff4f00;
     color: white;
-    font-size: 25px;
-    width: 80%;
+    font-size: 30px;
+    width: inherit;
+    text-align: center;
   }
   h2:after{
     position: absolute;
     bottom: -0.8em;
-    left: 10%;
+    left: 30%;
     z-index: 90;
     margin-left: -0.8em;
     border-top: 0.8em solid #ff4f00;
