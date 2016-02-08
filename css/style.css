@@ -33,8 +33,6 @@ body
 	:-moz-placeholder,
 	::-moz-placeholder,
 	:-ms-input-placeholder { /* WebKit, Blink, Edge */
-			margin-left:10px;
-			vertical-align: bottom;
 	    color: darkgray;
 	}
 
@@ -124,46 +122,79 @@ body
     vertical-align: bottom;
     min-height:300px;
     width:400px;
-    background:#ff4f00;
+    background:#e74c3c;
     margin:5px;
-    padding:10px;
+    overflow:hidden;
   }
   .form--wide1{
     width:600px;
+    background:#e74c3c;
   }
   .form--wide2{
     width:800px;
   }
-  .form input[type="text"],
+  .form input,
   .form textarea{
-    width:90%;
   	height:2em;
-  	opacity:0.8;
     font-family: Meiryo, TakaoPGothic, 'Hiragino Kaku W0';
-    font-size: 1em;
     appearance: none;
     box-shadow: none;
-    border: none;
-  	background: white;
-    padding-left:10px;
+    border:solid 1px #e74c3c;
+    padding-left:5px;
+    padding-right:5px;
+    margin:0;
   }
-  .form input[type="text"]:focus,
+  .form input:focus,
   .form textarea:focus,
-  .form input[type="text"].active,
+  .form input.active,
   .form textarea.active{
-  	opacity: 1;
     outline: none;
   }
-  .form.schedule input[type="text"]{
-    float:left;
-    width:50%;
+
+  .form.name input{
+    font-family: 'makinas';
+    font-size: 1.2em;
+    width:100%;
+    text-align:center;
   }
   .form.schedule textarea{
-    float:left;
-    width:50%;
-    height:200px;
+    position: absolute;
+    left:0;
+    width:300px;
+    padding:10px;
+    height:300px;
+    resize: none;
+    overflow:scroll;
   }
-
+  #datepicker input{
+    width:90%;
+    margin-top:10px;
+    margin-bottom:10px;
+    height:1.5em;
+    font-size: 0.8em;
+  }
+  a#clear,
+  a#complete{
+    display:block;
+    position: absolute;
+    right:0;
+    bottom:0;
+    width:150px;
+    line-height:1.5em;
+    background: #e67e22;
+    color:white;
+    font-family: 'makinas';
+    font-size:1.2em;
+  }
+  a#clear{
+    background: #c0392b;
+    right:150px;
+  }
+  a#clear:hover,
+  a#complete:hover{
+    background: white;
+    color:#ff4f00;
+  }
 /**********************************************************************
 /  Header
 /**********************************************************************/
@@ -188,7 +219,6 @@ body
 .header blockquote{
   position: absolute;
   left:140px;
-
 }
 
 /**********************************************************************
@@ -213,8 +243,8 @@ body
 /**********************************************************************/
 #datepicker{
   position: absolute;
-  right:10px;
-  width:45%;
+  right:0;
+  width:300px;
 }
 .ui-datepicker {
   height: auto;
@@ -225,22 +255,28 @@ body
   text-align: center;
   color:white;
 }
+.ui-datepicker-calendar{
+  margin:0 auto;
+}
 .ui-datepicker tr {
   color:white;
 }
 .ui-datepicker-prev {
+  width:50px;
   padding:5px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.4);
   float:left;
 }
 .ui-datepicker-next {
+  width:50px;
   padding:5px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.4);
   float:right;
 }
 .ui-datepicker-prev:hover,
 .ui-datepicker-next:hover {
-  background: rgba(0,0,0,0.5);
+  background: white;
+  color:#ff4f00;
 }
 .ui-datepicker-title {
   padding:5px;
@@ -249,11 +285,14 @@ body
   text-align: center;
   width:2em;
   text-decoration: none;
-  background:rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.4);
   padding:1px;
 }
 .ui-datepicker td:hover{
-  background:rgba(0,0,0,0.3);
+  background: white;
+}
+.ui-datepicker td:hover a{
+  color:#ff4f00;
 }
 .ui-datepicker a{
   color:white;

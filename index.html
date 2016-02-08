@@ -15,8 +15,10 @@
         $.datepicker.setDefaults($.datepicker.regional['ja']);
         $('#datepicker').datepicker({
           dateFormat: 'yy/mm/dd',
+          nextText: '>',
+          prevText: '<',
           onSelect: function(dateText, inst) {
-                    $("#inputdate").val($("#inputdate").val() + dateText + '\n');
+                    $("#inputdate").val($("#inputdate").val() + dateText + " " + $("#option").val() + '\n');
           }
         });
       });
@@ -38,18 +40,21 @@
 
       </div>
 
-      <!--div id='loader'><img src='http://2015.igem.org/wiki/images/8/8b/UT_TOKYO_Loading.gif'></div-->
       <div class='main'>
         <h2>1分で作れる！労働スケジュール管理表</h2>
         <div style='width:100%;text-align:center;'>
-          <div class='form'>
-            <input type="text" maxlength="16" placeholder="イベント名:十月革命当日のシフト" />
+
+          <div class='form name'>
+            <input type="text" maxlength="16" placeholder="(イベント名)十月革命当日のシフト" />
           </div>
+
           <div class='form form--wide1 schedule'>
-            <!--input type="text" placeholder="1917/10/25" id='inputdate' wrap='soft'/-->
             <textarea placeholder="1917/10/25" id='inputdate' wrap='soft'></textarea>
-            <div id="datepicker"></div>
+            <div id="datepicker"><input type='text' maxlength='16' id='option' placeholder='フリーオプション:19:00~20:00' /></div>
+            <a id='clear'>< 消す</a>
+            <a id='complete'>完成 ></a>
           </div>
+
         </div>
       </div>
 

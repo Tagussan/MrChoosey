@@ -4,7 +4,15 @@
   $(document).on('blur', 'textarea,input', function () {
     if($(this).val() != ""){
       $(this).addClass('active');
+    } else {
+      $(this).removeClass('active');
     }
+  });
+  $(document).on('click', '#clear', function(){
+    $('#inputdate').val('');
+  });
+  $(document).on('click', '#complete', function(){
+    alert('実装がまだできてないから待って');
   });
 
   /*** START UP ***/
