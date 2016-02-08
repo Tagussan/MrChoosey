@@ -46,12 +46,13 @@
         <div style='width:100%;text-align:center;'>
 
           <div class='form name'>
-            <input type="text" maxlength="16" placeholder="(イベント名)十月革命当日のシフト" />
+            <input type="text" maxlength="16" id ='eventname' placeholder="(イベント名)十月革命当日のシフト" />
+            <textarea placeholder="(メモ)悪天候決行。体調不良等で参加できない時はなるべく早く担当者レーニンまで連絡すること。" id='memo' wrap='soft'></textarea>
           </div>
 
           <div class='form form--wide1 schedule'>
             <textarea placeholder="1917/10/25" id='inputdate' wrap='soft'></textarea>
-            <div id="datepicker"><input type='text' maxlength='16' id='option' placeholder='オプション:19:00~20:00' /></div>
+            <div id="datepicker"><input type='text' maxlength='16' id='option' placeholder='(オプション)19:00~20:00' /></div>
             <a id='clear'>< 消す</a>
             <a id='complete'>完成 ></a>
           </div>
