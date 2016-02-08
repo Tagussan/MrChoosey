@@ -29,12 +29,10 @@ body
 			animation: none !important;
 		}
 
-	::-webkit-input-placeholder,
-	:-moz-placeholder,
-	::-moz-placeholder,
-	:-ms-input-placeholder { /* WebKit, Blink, Edge */
-	    color: darkgray;
-	}
+	::-webkit-input-placeholder{padding-top:0.2em;opacity: 0.8;color: white;}
+	:-moz-placeholder{opacity: 0.8;color: white;}
+	::-moz-placeholder{opacity: 0.8;color: white;}
+	:-ms-input-placeholder{opacity: 0.8;color: white;}
 
 
 	body,input,textarea,select
@@ -67,8 +65,8 @@ body
     margin:10px auto;
     margin-bottom: 1em;
     padding: 0.3em;
-    border:solid 1px #ff4f00;
-    background:#ff4f00;
+    border:solid 1px #e74c3c;
+    background:#e74c3c;
     color: white;
     font-size: 30px;
     width: inherit;
@@ -80,7 +78,7 @@ body
     left: 30%;
     z-index: 90;
     margin-left: -0.8em;
-    border-top: 0.8em solid #ff4f00;
+    border-top: 0.8em solid #e74c3c;
     border-left: 0.8em solid transparent;
     border-right: 0.8em solid transparent;
     border-bottom: 0;
@@ -121,14 +119,15 @@ body
     position: relative;
     display: inline-block;
     vertical-align: bottom;
-    min-height:300px;
+    height:400px;
     width:400px;
     background:#e74c3c;
     margin:5px;
+    padding:5px;
     overflow:hidden;
   }
   .form--wide1{
-    width:600px;
+    width:800px;
     background:#e74c3c;
   }
   .form--wide2{
@@ -140,15 +139,17 @@ body
     font-family: Meiryo, TakaoPGothic, 'Hiragino Kaku W0';
     appearance: none;
     box-shadow: none;
-    border:solid 1px #e74c3c;
+    background: #A01507;
     padding-left:5px;
     padding-right:5px;
     margin:0;
+    color:white;
   }
   .form input:focus,
   .form textarea:focus,
   .form input.active,
   .form textarea.active{
+    background: #FF7364;
     outline: none;
   }
 
@@ -156,14 +157,14 @@ body
     font-family: 'makinas';
     font-size: 1.2em;
     width:100%;
+    color:yellow;
     text-align:center;
   }
   .form.schedule textarea{
-    position: absolute;
-    left:0;
-    width:300px;
+    float:left;
+    width:390px;
     padding:10px;
-    height:300px;
+    height:390px;
     resize: none;
     overflow:scroll;
   }
@@ -180,16 +181,16 @@ body
     position: absolute;
     right:0;
     bottom:0;
-    width:150px;
+    width:200px;
     line-height:1.5em;
-    background: #e67e22;
+    background: orange;
     color:white;
     font-family: 'makinas';
     font-size:1.2em;
   }
   a#clear{
-    background: #c0392b;
-    right:150px;
+    background: #A01507;
+    right:200px;
   }
   a#clear:hover,
   a#complete:hover{
@@ -204,7 +205,7 @@ body
   display:block;
   width:100%;
   height:150px;
-  background:#ff4f00;
+  background:#e74c3c;
   padding:10px;
   overflow: hidden;
 }
@@ -245,7 +246,7 @@ body
 #datepicker{
   position: absolute;
   right:0;
-  width:300px;
+  width:400px;
 }
 .ui-datepicker {
   height: auto;
@@ -258,6 +259,7 @@ body
 }
 .ui-datepicker-calendar{
   margin:0 auto;
+  width:100%;
 }
 .ui-datepicker tr {
   color:white;
@@ -265,13 +267,13 @@ body
 .ui-datepicker-prev {
   width:50px;
   padding:5px;
-  background: rgba(255,255,255,0.4);
+  background: #ff988e;
   float:left;
 }
 .ui-datepicker-next {
   width:50px;
   padding:5px;
-  background: rgba(255,255,255,0.4);
+  background: #ff988e;
   float:right;
 }
 .ui-datepicker-prev:hover,
@@ -284,9 +286,8 @@ body
 }
 .ui-datepicker td{
   text-align: center;
-  width:2em;
   text-decoration: none;
-  background: rgba(255,255,255,0.4);
+  background: #ff988e;
   padding:1px;
 }
 .ui-datepicker td:hover{
@@ -296,6 +297,7 @@ body
   color:#ff4f00;
 }
 .ui-datepicker a{
+  line-height: 1.8em;
   color:white;
 }
 /**********************************************************************
