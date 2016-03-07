@@ -4,12 +4,12 @@
       <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
       <meta charset="UTF-8">
       <title>Comrade Choseyev - 同志チョーセイエフ</title>
-      <link id='css' rel='stylesheet' href='./css/reset.css?v=2' />
-      <link id='css' rel='stylesheet' href='./css/style.css?v=2' />
+      <%= stylesheet_link_tag "reset" %>
+      <%= stylesheet_link_tag "style" %>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/i18n/jquery-ui-i18n.min.js"></script>
-      <script type='text/javascript' src='./js/main.js'></script>
+      <%= javascript_include_tag "main" %>
       <script type="text/javascript">
       $(function() {
         $.datepicker.setDefaults($.datepicker.regional['ja']);
@@ -29,9 +29,9 @@
     <body>
 
       <div class='header'>
-        <img class='lenin' src='./images/lenin.png' />
+        <%= image_tag asset_path("lenin.png"), :class => "lenin"%>
         <blockquote>
-          <img class='title' src='./images/title.png' />
+          <%= image_tag asset_path("title.png"), :class => "title" %>
           <!--h1>
             Труд - это оптимальные распределение работы.<br />
             労働とは仕事分配の最適化である。
@@ -61,7 +61,7 @@
       </div>
 
       <div class='footer'>
-        <h1><i class="fa fa-copyright"></i>RoboTech. All rights reserved.<br />Designed by Kuma Bessmertnyykh.(@analokmaus)</h1>
+        <h1>All rights reserved.<br />Designed by Kuma Bessmertnyykh.(@analokmaus) and Kuma Tagsanov(@tagsanov) </h1>
       </div>
 
     </body>

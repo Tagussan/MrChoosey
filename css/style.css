@@ -3,7 +3,7 @@
 /**********************************************************************/
 @font-face {
     font-family: 'makinas';
-    src: url('../fonts/makinas_web.otf') format('opentype');
+    src: url('makinas_web.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 
